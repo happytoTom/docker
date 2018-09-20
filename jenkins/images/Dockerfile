@@ -1,4 +1,4 @@
-FROM jenkins:2.138.1
+FROM jenkins/jenkins:2.138.1
 MAINTAINER tangtao 307025795@qq.com
 #切换为root用户
 USER root
