@@ -17,8 +17,8 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash && \
     #cp docker/docker /usr/local/bin/ && \
     #rm -rf docker docker-latest.tgz
 # 将 `jenkins` 用户的组 ID 改为宿主 `docker` 组的组ID，从而具有执行 `docker` 命令的权限。
-ARG DOCKER_GID=999 
+#ARG DOCKER_GID=999 
 ARG DOCKER_PORT=9090
-USER ${DOCKER_GID}:jenkins
+USER $USER
 
 EXPOSE ${DOCKER_PORT}
