@@ -1,9 +1,8 @@
 FROM jenkins:2.60.3
-
+USER root
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 ENV TZ Asia/Shanghai
 
-USER root
 ARG dockerGid=978
 
 RUN rm /etc/apt/sources.list
