@@ -16,6 +16,5 @@ docker run -itd \
     -p 50000:50000 \
     -e JENKINS_OPTS=--httpPort=9090 \
     -v $(pwd)/jenkins_home:/var/jenkins_home \
-    #-v /var/run/docker.sock:/var/run/docker.sock \
     --name ${DOCKER_NAME} \
     ${DOCKER_IMAGES_NAME}:latest
