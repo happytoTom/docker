@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-c"]
 #安装node、npm、yarn环境
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash && \
     apt-get install -y nodejs && \
-    openjdk-7-jdk && \
+    apt-get install -y openjdk-7-jdk && \
     apt-get install -y build-essential && \
     rm -rf /var/lib/apt/lists/* && \
     npm install -g yarn
