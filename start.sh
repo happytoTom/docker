@@ -16,5 +16,6 @@ docker run -itd \
     -p 50000:50000 \
     -e JENKINS_OPTS=--httpPort=9090 \
     -v $(pwd)/jenkins_home:/var/jenkins_home \
+    -v $(pwd)/jenkins_home/tools/jdk1.7.0_80:/usr/java/jdk1.7.0_80 \
     --name ${DOCKER_NAME} \
     ${DOCKER_IMAGES_NAME}:latest
