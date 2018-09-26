@@ -4,7 +4,6 @@ MAINTAINER tangtao 307025795@qq.com
 USER root
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 ENV TZ Asia/Shanghai
-ENV JAVA_HOME /usr/java/jdk1.7.0_80
 #更新当前的shell环境
 SHELL ["/bin/bash", "-c"]
 #安装node、npm、yarn环境
