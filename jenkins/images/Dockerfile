@@ -13,7 +13,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash && \
     tar zxvf cmake-3.12.4.tar.gz && \
     rm -rf cmake-3.12.4.tar.gz && \
     cd cmake-3.12.4 && \
-    ./bootstrap && \
+    ./bootstrap -- -DCMAKE_BUILD_TYPE:STRING=Release && \
     make && make install && \
     apt-get install -y build-essential && \
     rm -rf /var/lib/apt/lists/* && \
