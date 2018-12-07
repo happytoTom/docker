@@ -11,11 +11,11 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash && \
     apt-get install -y nodejs && \
     wget https://github.com/Kitware/CMake/releases/download/v3.12.4/cmake-3.12.4.tar.gz && \
     tar zxvf cmake-3.12.4.tar.gz && \
-    rm -rf cmake-3.12.4.tar.gz && \
     cd cmake-3.12.4 && \
     ./bootstrap -- -DCMAKE_BUILD_TYPE:STRING=Release && \
     make && make install && \
     apt-get install -y build-essential && \
+    rm -rf cmake-3.12.4.tar.gz && \
     rm -rf /var/lib/apt/lists/* && \
     npm install -g yarn
     #curl -O https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz && \
